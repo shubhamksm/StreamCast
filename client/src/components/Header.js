@@ -3,17 +3,22 @@ import { Link } from "react-router-dom";
 
 import GoogleAuth from "./GoogleAuth";
 
+import logo from "../images/Logo.svg";
+
 const Header = () => {
   return (
-    <div className="ui secondary pointing menu">
-      <Link to="/" className="item">
-        StreamCast
-      </Link>
-      <div className="right menu">
-        <Link to="/" className="item">
-          All Streams
+    <div id="main-header">
+      <div id="header" className="ui container">
+        <Link to="/" id="branding" className="item">
+          <img src={logo} alt="logo" width="70px" />
+          <p>StreamCast</p>
         </Link>
-        <GoogleAuth />
+        <div id="right-menu">
+          <Link to="/" className="item">
+            All Streams
+          </Link>
+          <GoogleAuth />
+        </div>
       </div>
     </div>
   );
